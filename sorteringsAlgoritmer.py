@@ -2,10 +2,30 @@ import random, math, sys
 
 
 def InsertionSort(items):
-    for index in range(len(items)):
-        for j in range(index, len(items)):
-j = min
-            if items[j] < items[min]
-            j = min
+    for i in range(1, len(items)):
+        j = i
+        while j > 0 and items[j-1] > items[j]:
+            items[j-1], items[j] = items[j], items[j-1]
+            j = j-1
+    return items
 
-InsertionSort([6,3,8,9,4,7,4,6,0])
+usortert = [12,56,7785,342,7]
+print('usortert')
+print(usortert)
+print('Insertion')
+print(InsertionSort(usortert))
+
+def bubbleSort(items):
+    for index in range(len(items)-1,0,-1):
+        for i in range(index):
+            if items[i]>items[i+1]:
+                temp = items[i]
+                items[i] = items[i+1]
+                items[i+1] = temp
+    return items
+usortert = [12,56,7785,342,7]
+
+print('usortert')
+print(usortert)
+print('bubble')
+print(bubbleSort(usortert))
